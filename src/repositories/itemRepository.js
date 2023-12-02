@@ -1,10 +1,5 @@
 const Item = require("../models/itemModel");
 
-const createItem = async (itemData) => {
-  const newItem = new Item(itemData);
-  return await newItem.save();
-};
-
 const getAllItems = async () => {
   return await Item.find();
 };
@@ -22,7 +17,6 @@ const deleteItem = async (itemId) => {
 };
 
 module.exports = {
-  createItem,
   getAllItems,
   getItemById,
   updateItem,

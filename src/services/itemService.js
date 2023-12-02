@@ -1,8 +1,8 @@
 const itemRepository = require("../repositories/itemRepository");
 
 const createItem = async (itemData) => {
-  // Add validation logic here if needed
-  return await itemRepository.createItem(itemData);
+  const newItem = new Item(itemData);
+  return await newItem.save();
 };
 
 const getAllItems = async () => {
